@@ -1,0 +1,49 @@
+
+import java.util.Random;
+class MyThread extends Thread
+{
+	MyThread(String s)
+	{
+		super(s);
+	}
+	public  void run()
+	{
+		System.out.println(getName());
+		while(true)
+		{
+			System.out.println(this);
+			Random r=new Random();
+			int s=r.nextInt(4999);
+			System.out.println("Thread Is Sleeeping for " +s);
+			try
+			{
+				Thread.sleep(s);
+			}
+			catch(Exception e)
+			{
+				System.out.println("Errror = " +e);
+			}
+		}
+	}
+}
+public class SLIP13_2
+{
+	public static void main(String args[])
+	{
+		MyThread t1=new MyThread("Raj");
+		MyThread t2=new MyThread("Anand");
+		t1.start();
+		t2.start();
+		try
+		{
+			t1.join();
+			t2.join();
+		}
+		catch(Exception e)
+		{
+			System.out.println(t1.getName()+ "Thread Dead. ");
+			System.out.println(t2.getName()+ "Thread Dead. ");
+		}
+	}
+}
+

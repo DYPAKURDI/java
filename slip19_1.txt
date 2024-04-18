@@ -1,0 +1,35 @@
+import java.util.LinkedList;
+import java.util.Scanner;
+public class SLIP19_1
+{
+	public static void main(String[] args) 
+	{
+      Scanner scanner=new Scanner(System.in);
+      LinkedList<Integer>intergerList=new LinkedList<>();
+      System.out.print("Enter the N numbers of Integer List:- ");
+      int n=scanner.nextInt();
+      for(int i=0;i<n;i++)
+      {
+      	System.out.print("Enter Integers:- " + (i+1) + ": ");
+      	int numbers=scanner.nextInt();
+      	intergerList.add(numbers);
+      }
+      System.out.println("\nDisplay Integers List:");
+      for(int integers : intergerList) 
+      {
+      	System.out.println(integers);
+      }
+      System.out.println("\nDisplay Negative Numbers :- ");
+      for(int negativeNumber : intergerList)
+      {
+      	if(negativeNumber<0)
+      	{
+      		System.out.println(negativeNumber);
+      		System.out.println("Negative Numbers is in List");
+      	}
+      
+      }
+      
+	}
+}
+      

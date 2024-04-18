@@ -1,0 +1,24 @@
+import java.util.*;
+import java.util.LinkedList;
+public class SLIP29_2
+{
+public static void main(String[] args) 
+{
+LinkedList<String> linkedList=new LinkedList<>();
+linkedList.addLast("Raj");
+linkedList.addLast("Ajinkya");
+linkedList.addLast("Anand");
+linkedList.addLast("Mohit");
+System.out.println("After adding elements at Last position: " + linkedList);
+if(!linkedList.isEmpty())
+{
+linkedList.removeFirst();
+System.out.println("After deleting the First element: " + linkedList);
+} 
+else 
+{
+System.out.println("The list is empty. Cannot delete the last element.");
+}
+System.out.println("Size of the LinkedList: " + linkedList.size());
+}
+}

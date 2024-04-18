@@ -1,0 +1,29 @@
+<html>
+<body>
+<form method="post" action="SLIP28_1.jsp">
+Enter a String: <input type="text" name="inputString"><br>
+<input type="submit" value="Reverse">
+</form>
+</body>
+</html>
+
+
+
+
+
+<%@ page language="java" %>
+<%
+String inputString = request.getParameter("inputString");
+if (inputString != null && !inputString.isEmpty())
+{
+String reversedString = new
+StringBuilder(inputString).reverse().toString();
+
+out.println("Original String:" + inputString + "<br>");
+out.println("Reversed String:" + reversedString);
+}
+%>
+
+
+
+

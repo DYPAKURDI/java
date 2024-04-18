@@ -1,0 +1,32 @@
+import java.util.HashSet;
+import java.util.TreeSet;
+import java.util.Scanner;
+
+public class SLIP2_1
+{
+public static void main(String[] args) 
+{
+Scanner scanner = new Scanner(System.in);
+HashSet<String> friendsList = new HashSet<>();
+System.out.print("Enter the number of friends: ");
+int n = scanner.nextInt();
+scanner.nextLine();
+for (int i=0;i<n;i++) 
+{
+System.out.print("Enter friend's name " + (i+1) + ": ");
+String friendName = scanner.nextLine();
+friendsList.add(friendName);
+}
+System.out.println("\nFriends in the list:");
+for (String friend : friendsList) 
+{
+System.out.println(friend);
+}
+TreeSet<String> sortedNames = new TreeSet<>(friendsList);
+System.out.println("\nFriend names in ascending order: ");
+for (String name : sortedNames) 
+{
+System.out.println(name);
+}
+}
+}

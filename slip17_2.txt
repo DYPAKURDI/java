@@ -1,0 +1,42 @@
+import java.awt.*;
+import java.awt.event.*;
+class SLIP17_2 extends Frame implements Runnable
+{
+Thread t;
+Label l1;
+int n;
+SLIP17_2()
+{
+t=new Thread(this);
+t.start();
+setLayout(null);
+l1=new Label(" ");
+l1.setBounds(100,100,100,40);
+add(l1);
+setSize(300,300);
+setVisible(true);
+n=0;
+}
+public void run()
+{
+try
+{
+for(n=1;n<=100;n++)
+
+{
+String str = String.valueOf(n);
+l1.setText(str);
+Thread.sleep(200);
+}
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+run();
+}
+public static void main(String args[])
+{
+SLIP17_2 b=new SLIP17_2();
+}
+}

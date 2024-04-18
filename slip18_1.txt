@@ -1,0 +1,15 @@
+class SLIP18_1 extends Thread 
+{
+	public void run()
+	{
+	System.out.println("Thread Name: " + Thread.currentThread().getName());
+        System.out.println("Thread Priority: " + Thread.currentThread().getPriority());
+	}
+	public static void main(String[] args) 
+	{
+	SLIP18_1 t1=new SLIP18_1();
+        t1.setName("Raj");
+        t1.start();
+	}
+}
+

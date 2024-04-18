@@ -1,0 +1,29 @@
+import java.lang.*;
+import java.util.*;
+class SLIP23_1 extends Thread
+{
+	String s1;
+	SLIP23_1(String s)
+	{          
+		s1=s;
+		start();
+	}
+	public void run()
+	{
+		System.out.print("Vowels are: ");
+		for(int i=0;i<s1.length();i++)
+		{
+			char ch=s1.charAt(i);
+			if(ch=='a'|| ch=='e'|| ch=='i'|| ch=='o'|| ch=='u')
+			System.out.print(" "+ch);
+		}
+		System.out.println(" ");
+	}
+	public static void main(String[] args)
+	{
+		Scanner sn=new Scanner(System.in);
+		System.out.println("Enter a string");
+		String str1=sn.next();
+		SLIP23_1 v=new SLIP23_1(str1);
+	}
+}

@@ -1,0 +1,25 @@
+import java.io.*; 
+import java.util.Enumeration; 
+import java.util.Hashtable; 
+
+public class SLIP5_1
+{ 
+	public static void main(String[] args) 
+   {
+   	Hashtable<String,String> ht=new Hashtable<>(); 
+      ht.put("7894561023","Raj"); 
+      ht.put("8458658451","Ajinkya"); 
+      ht.put("3784569634","Anand"); 
+      System.out.println("Display the details of Hash Table" );
+      System.out.println(ht);
+      System.out.println("Student Details :\n");
+     	Enumeration<String>mobileNumbers=ht.keys(); 
+     	while(mobileNumbers.hasMoreElements()) 
+     	{
+     		String mobileNumber=mobileNumbers.nextElement();
+     		String studentName=ht.get(mobileNumber);
+     		System.out.println("Mobile Number:- " + mobileNumber + "\nStudent Name:- " + studentName);
+     		System.out.println(" ");
+      }
+	} 
+}

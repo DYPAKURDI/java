@@ -1,0 +1,26 @@
+import java.util.*;
+import java.util.TreeSet;
+public class SLIP17_1 
+{
+
+    public static void main(String[] args) {
+
+        int no, element, i;
+
+        Scanner scanner = new Scanner(System.in);
+        TreeSet<Integer> ts = new TreeSet<>();
+
+        System.out.println("Enter the number of elements:");
+
+        no = scanner.nextInt();
+
+        for (i = 0; i < no; i++) {
+            System.out.println("Enter the element:");
+            element = scanner.nextInt();
+            ts.add(element);
+        }
+
+        System.out.println("The elements in sorted order: " + ts);
+        scanner.close();
+    }
+}

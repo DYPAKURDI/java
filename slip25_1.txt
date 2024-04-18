@@ -1,0 +1,31 @@
+<html>
+<head>
+</head>
+<body>
+<form action="SLIP25_1.jsp" method="post">
+Name : <input type="text" name="name"><br>
+Age : <input type="text" name="age"><br>
+<input type="submit" value="Check">
+</form>
+</body>
+</html>
+
+
+
+
+<%@page contentType="text/html" %>
+<%
+String name = request.getParameter("name");
+int age = Integer.parseInt(request.getParameter("age"));
+if(age >=18)
+{
+out.println(name + "\nAllowed to vote");
+}
+else
+{
+out.println(name + "\nNot allowed to vote");
+}
+%>
+
+
+

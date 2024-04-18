@@ -1,0 +1,22 @@
+import java.util.*;
+public class SLIP21_1
+{ 
+public static void main(String[] args) 
+{ 
+Scanner scanner = new Scanner(System.in); 
+System.out.print("Enter the number of subjects: ");
+
+int n = scanner.nextInt();
+LinkedList<String> list = new LinkedList<>();
+for (int i = 0; i < n; i++) 
+{
+System.out.print("Enter subject " + (i+1) + ": "); 
+String subject = scanner.next(); 
+list.add(subject); } System.out.println("Subject names:"); 
+Iterator<String> iterator = list.iterator(); 
+while (iterator.hasNext()) 
+{ 
+System.out.println(iterator.next()); 
+}
+}
+}

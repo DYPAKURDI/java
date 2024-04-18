@@ -1,0 +1,29 @@
+class SLIP8_1 extends Thread
+{
+	String message;
+	int n;
+	SLIP8_1(String message,int n)
+	{
+		this.message=message;
+		this.n=n;
+	}
+	public void run()
+	{
+		for (int i=1;i<=n;i++)
+		{
+			System.out.println(message+ "-" +i);
+		}
+		System.out.println(" ");
+	}
+   public static void main(String[] args) 
+   {
+    	SLIP8_1 t1=new SLIP8_1("COVID19",10);
+     	SLIP8_1 t2=new SLIP8_1("LOCKDOWN2020",20);
+        SLIP8_1	t3=new SLIP8_1("VACCINATED2021",30);
+		t1.start();
+      t2.start();
+      t3.start();
+   }
+}
+
+

@@ -1,0 +1,30 @@
+import java.sql.*;
+Public class SLIP7_2
+{
+Public static void main(String args[])
+{
+String id=”id1”;
+String pwd=”pwd1”;
+String fullname=”geeks for geeks”;
+try{
+Class.forName(“jdbc.postgres.sql”);
+Connection con=DriverManager.getConnection(“jdbc:odbc:postgres”,”localhost”,””);
+Statement stmt=con.createStatement();
+String q1=”insert into user values(“ “+id+ “ “+pwd+ “ “ +fullname);
+int x=stmt.excuteUpdate(q1);
+if(x>0)
+{
+System.out.println(“Succesfully Inserted”);
+}
+else
+{
+System.out.println(“Insert Failed”);
+}
+con.close();
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+}
+}
